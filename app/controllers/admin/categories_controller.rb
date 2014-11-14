@@ -33,7 +33,7 @@ class Admin::CategoriesController < Admin::BaseController
 
     @category.attributes = params[:category]
 
-    if request.post? and @category
+    if request.post?
       respond_to do |format|
         format.html { save_category }
         format.js do
